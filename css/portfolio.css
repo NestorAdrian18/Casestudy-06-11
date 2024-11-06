@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: white;
+    font-family: poppins;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+:root {
+    --accent1: #842076;
+    --accent2: #10d8d8; 
+}
+/*NAV BAR*/
+nav{
+    font-size: 20px;
+    display: flex;
+    top:0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    height: 2em;
+    position: fixed;
+    width: 100%;
+    border-bottom: 0.05em solid rgba(255, 255, 255, 10%);
+    backdrop-filter: blur(0.2em);
+    z-index: 999;
+}
+nav > img{
+    width: 1.5em;
+    margin-left: 0.5em;
+}
+aside{
+    display: flex;
+    margin-right: 0.5em;
+    align-items: center;
+    gap: 0.3em;
+}
+aside h1{
+    font-weight: 200;
+    font-size: 1em;
+}
+.burger{
+    width: 1.7em;
+    height: 1.7em;
+    position: relative;
+}
+.burger span{
+    width: 100%;
+    height: 0.1em;
+    background-color: white;
+    display: block;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+.burger span:nth-child(1){
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.burger span:nth-child(2){
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -25%);
+}
+.burger span:nth-child(3){
+    left: 100%;
+    top: 75%;
+    transform: translate(-100%, -75%);
+    width: 70%;
+}
+.burger.active span:nth-child(2){
+    left: 0;
+    top: 50%;
+    transform: rotate(45deg);
+    background-color: red;
+    width: 70%;
+}
+.burger.active span:nth-child(1){
+    width: 0;
+}
+.burger.active span:nth-child(3){
+    left: 0;
+    top: 50%;
+    transform: rotate(-45deg);
+    width: 70%;
+    background-color: red;
+}
+.menu{
+    font-size: 20px;
+    height: 100vh;
+    width: 30em;
+    position: fixed;
+    top: 0;
+    right: -30em;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 40px;
+    background-color: white;
+    color: black;
+    transition: 0.3s ease-in-out;
+    z-index: 999;
+}
+.menu h1{
+    font-size: 3em;
+    margin-left: 0.5em;
+}
+.menu hr{
+    margin: 0em 0em 1em 1.5em;
+    width: 90%;
+    border: none;
+    background-color: black;
+    height: 0.1em;
+}
+.menu ul a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    margin-left: 1em;
+    font-size: 1.8em;
+}
+.menu ul{
+    list-style-type: none;
+}
+.menu ul a{
+    margin-bottom: 0.30em;
+}
+.menu > a{
+    text-decoration: none;
+    color:  black;
+    font-size: 1.8em;
+    padding: 0.01em 1em;
+    border: 0.1em solid black;
+    margin: auto auto 20% auto;
+    line-height: 1;
+    border-radius: 0.2em;
+}
+.menu.active{
+    right: 0;
+}
+/*NAV BAR*/
+/*main profile*/
+.main-profile{
+    font-size: 20px;
+    margin-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3em;
+    margin-bottom: 5em;
+}
+.main-profile > img{
+    margin-bottom: 0.5em;
+    width: 25em;
+    height: 22.5em;
+    border: 0.05em solid white;
+}
+.profile-info > h1{
+    font-size: 3.5em;
+    line-height: 0.9;
+    color: var(--accent1);
+}
+.profile-info p{
+    font-size: 1.5em;
+    font-weight: 200;
+    margin-bottom: 1em;
+}
+.profile-info a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4em;
+}
+.profile-info ul{
+    list-style-type: none;
+}
+.profile-info ul li h1{
+    color: var(--accent2);
+    font-size: 1.5em;
+}
+.profile-info img{
+    width: 2em;
+}
+.profile-info ul li:nth-child(2),
+.profile-info ul li:nth-child(3){
+    margin-left: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    font-size: 0.8em;
+}
+.profile-social h1{
+    font-size: 1.5em;
+    color: var(--accent2);
+}
+.profile-social img{
+    width: 2em;
+}
+/*main profile*/
+/*ABOUT ME*/
+.main-about{
+    font-size: 20px;
+    margin-bottom: 5em;
+}
+.main-about h1{
+    font-size: 2.5em;
+    font-weight: 300;
+}
+.main-about p{
+    width: 80%;
+    font-size: 1.4em;
+    font-weight: 250;
+}
+.main-about p span{
+    color: var(--accent2);
+}
+/*ABOUT ME*/
+/*SKILL SECTION*/
+.main-skill{
+    font-size: 20px;
+    margin-bottom: 5em;
+}
+.main-skill > h1{
+    font-size: 3em;
+    color: var(--accent1);
+}
+.sub-skill{
+    display: flex;
+    justify-content: center;
+    border: 0.05em solid white;
+    padding: 1.5em 0px;
+}
+.sub-skill h1{
+    font-size: 2em;
+}
+.skill-grid{
+    width: 90%;
+    display: grid;    
+    grid-template-columns: repeat(auto-fit, 15em);
+    justify-content: center;
+    gap: 0.5em; 
+    font-size: 20px;
+}
+.skill-card{
+    display: grid;
+    width: max-content;
+    grid-template-columns: 15em; 
+    grid-template-rows: 10em 5em;   
+}
+.skill-card img{
+    width: 7em;
+}
+.skill-card div{
+    width: 100%;
+    height: 100%;
+    border: 0.05px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skill-card div:has(img){
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+}
+.skill-card div:has(h1){
+    background-color: var(--accent1);
+    font-size: 1em;
+    border-bottom-left-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
+}
+/*SKILL SECTION*/
+/*project section*/
+.main-project{
+    font-size: 20px;
+    margin-bottom: 5em;
+}
+.main-project > h1{
+    font-size: 3em;
+    color: var(--accent1);
+}
+.sub-project{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 22.5em);
+    gap: 2em;
+    border: 0.05em solid white;
+    padding: 1em 0px;
+    font-size: 20px;
+}
+.sub-project a{
+    text-decoration: none;
+    color: white;
+}
+.project-card{
+    width: 22.5em;
+    height: 22.5em;
+    border: 0.05em solid white;
+    position: relative;
+}
+.project-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}   
+.project-card span{
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 20%);
+    backdrop-filter: blur(3px);
+    border: 0.05em solid white;
+    left: 50%; 
+    top: 0;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+}
+.project-card span::after{
+    content: '';
+    position: absolute;
+    border: 0.05em solid white;
+    width: 105%;
+    height: 2.5em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--accent1);
+    transition: all 0.3s ease-in-out;
+}
+.project-card span::before{
+    content: 'VIEW';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0;
+    font-size: 3em;
+    color: var(--accent2);
+    transition: opacity 0.3s linear;
+}
+.project-card span p{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    font-size: 1.3em;
+    transition: all 0.3s ease-in-out;
+}
+.project-card:hover span{
+    height: 100%;
+}
+.project-card:hover span::after{
+    width: 0;
+    border: none;
+}
+.project-card:hover span p{
+    opacity: 0;
+    pointer-events: none;
+}
+.project-card:hover span::before{
+    opacity: 100%;
+}
+/*project section*/   
+/*artwork section*/
+.main-artwork{
+    font-size: 20px;
+    margin-bottom: 5em;
+}
+.main-artwork > h1{
+    font-size: 3em;
+    color: var(--accent1);
+}
+.sub-artwork{
+    font-size: 20px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 25em);
+    gap: 1em;
+    border: 0.05em solid white;
+    padding: 1em 0px;
+}  
+.sub-artwork img{
+    width: 25em;
+}
+/*artwork section*/
+
+
+/*nav media query*/
+@media (min-width:2560px){
+    nav{
+        font-size: 40px;
+    }
+    .menu{
+        margin-top: 80px;
+        font-size: 20px;
+    }
+}
+@media (max-width:900px){
+    .menu{
+        font-size: 15px;
+    }
+}
+@media (max-width:700px){
+    .menu{
+        font-size: 13px;
+    }
+}
+@media (max-width:500px){
+    .menu{
+        font-size: 10px;
+    }
+}
+@media (max-width:400px){
+    .menu{
+        font-size: 8px;
+    }
+}
+/*nav media query*/
+
+
+
+@media (min-width: 2560px){
+    .main-profile{
+        font-size: 30px;
+    }
+    .main-about{
+        font-size: 30px;
+    }
+    .main-skill{
+        font-size: 30px;
+    }
+    .skill-grid{
+        font-size: 26px;
+    }
+    .main-project{
+        font-size: 30px;
+    }
+    .sub-project{
+        font-size: 28px;
+    }
+    .main-artwork{
+        font-size: 30px;
+    }
+    .sub-artwork{
+        font-size: 26px;
+    }
+} 
+@media (min-width: 3840px){
+    .main-profile {
+        font-size: 45px;
+    }
+    .main-about {
+        font-size: 45px;
+    }
+    .main-skill {
+        font-size: 45px;
+    }
+    .skill-grid {
+        font-size: 39px;
+    }
+    .main-project {
+        font-size: 45px;
+    }
+    .sub-project {
+        font-size: 42px;
+    }
+    .main-artwork {
+        font-size: 45px;
+    }
+    .sub-artwork {
+        font-size: 39px;
+    }
+}
+@media (max-width: 760px){
+    .main-profile{
+        font-size: 15px;
+    }
+    .main-about{
+        font-size: 15px;
+    }
+    .main-skill{
+        font-size: 15px;
+    }
+    .skill-grid{
+        font-size: 13px;
+    }
+    .main-project{
+        font-size: 15px;
+    }
+    .sub-project{
+        font-size: 14px;
+    }
+    .main-artwork{
+        font-size: 15px;
+    }
+    .sub-artwork{
+        font-size: 13px;
+    }
+}
+@media (max-width: 500px){
+    .main-profile{
+        font-size: 11px;
+    }
+    .main-about{
+        font-size: 11px;
+    }
+    .main-skill{
+        font-size: 11px;
+    }
+    .skill-grid{
+        font-size: 8px;
+    }
+    .main-project{
+        font-size: 11px;
+    }
+    .sub-project{
+        font-size: 9px;
+    }
+    .main-artwork{
+        font-size: 11px;
+    }
+    .sub-artwork{
+        font-size: 8px;
+    }
+}
+@media (max-width: 460px){
+    .main-profile{
+        font-size: 9px;
+    }
+    .main-about{
+        font-size: 9px;
+    }
+    .main-skill{
+        font-size: 9px;
+    }
+    .skill-grid{
+        font-size: 7px;
+    }
+    .main-project{
+        font-size: 9px;
+    }
+    .sub-project{
+        font-size: 12px;
+    }
+    .main-artwork{
+        font-size: 9px;
+    }
+    .sub-artwork{
+        font-size: 11px;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: white;
+    font-family: poppins;
+}
+:root {
+    --accent1: #842076;
+    --accent2: #10d8d8; 
+}
+/*NAV BAR*/
+nav{
+    font-size: 20px;
+    display: flex;
+    top:0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    height: 2em;
+    position: fixed;
+    width: 100%;
+    border-bottom: 0.05em solid rgba(255, 255, 255, 10%);
+    backdrop-filter: blur(0.2em);
+    z-index: 999;
+}
+nav > img{
+    width: 1.5em;
+    margin-left: 0.5em;
+}
+aside{
+    display: flex;
+    margin-right: 0.5em;
+    align-items: center;
+    gap: 0.3em;
+}
+aside h1{
+    font-weight: 200;
+    font-size: 1em;
+}
+.burger{
+    width: 1.7em;
+    height: 1.7em;
+    position: relative;
+}
+.burger span{
+    width: 100%;
+    height: 0.1em;
+    background-color: white;
+    display: block;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+.burger span:nth-child(1){
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.burger span:nth-child(2){
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -25%);
+}
+.burger span:nth-child(3){
+    left: 100%;
+    top: 75%;
+    transform: translate(-100%, -75%);
+    width: 70%;
+}
+.burger.active span:nth-child(2){
+    left: 0;
+    top: 50%;
+    transform: rotate(45deg);
+    background-color: red;
+    width: 70%;
+}
+.burger.active span:nth-child(1){
+    width: 0;
+}
+.burger.active span:nth-child(3){
+    left: 0;
+    top: 50%;
+    transform: rotate(-45deg);
+    width: 70%;
+    background-color: red;
+}
+.menu{
+    font-size: 20px;
+    height: 100vh;
+    width: 30em;
+    position: fixed;
+    top: 0;
+    right: -30em;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 40px;
+    background-color: white;
+    color: black;
+    transition: 0.3s ease-in-out;
+    z-index: 999;
+}
+.menu h1{
+    font-size: 3em;
+    margin-left: 0.5em;
+}
+.menu hr{
+    margin: 0em 0em 1em 1.5em;
+    width: 90%;
+    border: none;
+    background-color: black;
+    height: 0.1em;
+}
+.menu ul a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    margin-left: 1em;
+    font-size: 1.8em;
+}
+.menu ul{
+    list-style-type: none;
+}
+.menu ul a{
+    margin-bottom: 0.30em;
+}
+.menu > a{
+    text-decoration: none;
+    color:  black;
+    font-size: 1.8em;
+    padding: 0.01em 1em;
+    border: 0.1em solid black;
+    margin: auto auto 20% auto;
+    line-height: 1;
+    border-radius: 0.2em;
+}
+.menu.active{
+    right: 0;
+}
+/*NAV BAR*/
+/*INTRO SECTION*/
+ .intro-section{
+    font-size: 20px;
+    height: 100vh;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+ }
+ .intro-section img{
+    width: 25vw;
+ }
+ .intro-section p{
+    font-size: 2.0vw;
+    font-weight: bold;
+ }
+/*PROFILE*/
+.main-profile{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin: 5em auto;
+    gap: 5em;
+    width: 90%;
+}
+.sub-profile{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    font-size: 20px;
+}
+.img-profile{
+    display: flex;
+    gap: 0.5em;
+}
+.social-profile{      
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3em;
+}
+.social-profile img{
+    width: 2.5em;
+}
+.img-profile > img{
+    border: 0.05em solid white;
+    width: 13.2em;
+} 
+.desc-profile h1{
+    font-size: 3em;
+    color:var(--accent1); 
+}
+.desc-profile p{
+    margin-bottom: 1em;
+    font-size: 1.3em;
+    width: 20em;
+}
+.desc-profile > a{
+    text-decoration: none;
+    background-color: var(--accent2); 
+    color: var(--accent1);
+    font-weight: bold; 
+    font-size: 1.5em;
+    padding: 0.01em 1em;
+}
+.profile-about{
+    font-size: 1.5em;
+    font-weight: 300;
+    max-width: 1000px;
+}
+.profile-about span{
+    color: var(--accent1);
+}/*PROFILE*/
+/*HOBBY*/
+.main-hobby{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5em;
+}
+.main-hobby h1{
+    font-size: 3em;
+}
+.main-hobby h1 span{
+    color: var(--accent1);
+    font-size: 1.3em;
+}
+.main-hobby hr{
+    margin: 1.5em 0;
+    width: 65em;
+    background-color: white;
+    height: 0.5em;
+    border: none;
+}
+.sub-hobby{
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 12em);
+    grid-template-rows: 30em;
+    justify-content: center;
+    gap: 1em;
+}
+.sub-hobby a div{
+    background-position: center;
+    background-size: cover;
+}
+.sub-hobby a:nth-child(1) div{
+    background-image: url('/animehobby.png');
+}
+.sub-hobby a:nth-child(2) div{
+    background-image: url('/mangahobby.png');
+}
+.sub-hobby a:nth-child(3) div{
+    background-image: url('/musichobby.png');
+}
+.sub-hobby a:nth-child(4) div{
+    background-image: url('/gaminghobby.png');
+}
+.sub-hobby a:nth-child(5) div{
+    background-image: url('/moviehobby.png');
+}
+.sub-hobby a{
+    text-decoration: none;
+}
+.sub-hobby div{
+    border: 0.2em solid white;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.sub-hobby div span:nth-child(1){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    z-index: 1;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    -webkit-text-stroke: 0.05em black;
+}
+.sub-hobby div span:nth-child(2){
+    width: 100%;
+    height: 2.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 20%);
+    border: 0.05em solid white;
+    transition: 0.3s ease-in-out;
+    backdrop-filter: blur(0.2em);
+}
+.sub-hobby div:hover span:nth-child(2){
+    height: 100%;
+}
+.sub-hobby div:hover span:nth-child(1){
+    opacity: 0;
+}
+.sub-hobby a div::after{
+    content: 'VIEW';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--accent2);
+    z-index: 1;
+    font-size: 2em;
+    font-weight: bold;
+    -webkit-text-stroke: 0.05em black;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.sub-hobby a div:hover::after{
+    opacity: 100;
+}
+/*HOBBY*/
+/*footer*/
+
+footer{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 10%);
+    border-top: 0.05em solid white;
+    color: white;
+    padding: 1em 0em;  
+}
+.foot-grid{
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    padding: 0em 3em;
+}
+.foot-link,
+.foot-social,
+.foot-contact{
+    width: max-content;
+    font-size: 0.8em;
+}
+footer h1{
+    font-size: 1.5em; 
+    line-height: 0.9; 
+    margin-bottom: 0.5em;
+}
+footer h3{
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0.2em;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer ul{
+    list-style-type: none; 
+    margin-bottom: 0.5em; 
+}
+.foot-social img{
+    width: 2em;
+}
+.foot-social ul li{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.foot-contact ul li{
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+.foot-contact img{
+    width: 1em;
+}
+.foot-link ul li{
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+.foot-link img{
+    width: 1em;
+}
+/*footer*/
+
+/*nav media query*/
+@media (min-width:2560px){
+    nav{
+        font-size: 40px;
+    }
+    .menu{
+        margin-top: 80px;
+        font-size: 20px;
+    }
+}
+@media (max-width:900px){
+    .menu{
+        font-size: 15px;
+    }
+}
+@media (max-width:700px){
+    .menu{
+        font-size: 13px;
+    }
+}
+@media (max-width:500px){
+    .menu{
+        font-size: 10px;
+    }
+}
+@media (max-width:400px){
+    .menu{
+        font-size: 8px;
+    }
+}
+/*nav media query*/
+
+
+/*ALL*/
+@media (min-width:2100px){
+    .main-profile{
+        justify-content: center;
+    }
+}
+@media (min-width:2560px){
+    .sub-profile{
+        font-size: 30px;
+    }
+    .main-profile{
+        font-size: 30px;
+        justify-content: center;
+    }
+    .main-hobby{
+        font-size: 40px;
+    }
+    .sub-hobby{
+        font-size: 40px;
+    }
+}
+@media (max-width:1700px){
+    .main-profile{
+        flex-wrap: wrap;
+    }
+    .profile-about{
+        width: 100%;
+    }
+}
+@media (max-width:1400px){
+    .main-hobby{
+        font-size: 15px;
+    }
+    .sub-hobby{
+        font-size: 15px;
+    }
+}
+@media (max-width:1022px){
+    .main-hobby{
+        font-size: 11px;
+    }
+    .sub-hobby{
+        font-size: 11px;
+    }
+    .intro-section{
+        font-size: 10px;
+    }
+    .intro-section > img{
+        width: 40vw;
+    }
+    .intro-section p{
+        font-size: 3.325vw;
+    }
+}
+@media (max-width:930px){
+    .main-profile{
+        gap: 2em;
+    }
+    .sub-profile{
+        font-size: 15px;
+    }
+}
+@media (max-width:770px){
+    .sub-profile{
+        font-size: 13px;
+    }
+    .profile-about{
+        font-size: 18px;
+    }
+    .main-hobby{
+        font-size: 11px;
+    }
+    .main-hobby hr{
+        width: 60em;
+    }
+    .sub-hobby{
+        font-size: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 15em);
+        grid-template-rows: repeat(3, 10em);
+        grid-template-areas: "A B"
+                             "C D"
+                             "K K";
+        justify-content: center;
+        gap: 1em;
+    }
+    .sub-hobby a:nth-child(5) div{
+        grid-area: K;
+        height: 10em;
+        width: 31em;
+    }
+    .sub-hobby a:nth-child(1) div{
+        background-image: url('/tagiledanimehobby.png');
+    }
+    .sub-hobby a:nth-child(2) div{
+        background-image: url('/tagiledmangahobby.png');
+    }
+    .sub-hobby a:nth-child(3) div{
+        background-image: url('/tagiledmusichobby.png');
+    }
+    .sub-hobby a:nth-child(4) div{
+        background-image: url('/tagiledgaminghobby.png');
+    }
+    .sub-hobby a:nth-child(5) div{
+        background-image: url('/tagilidmoviehobby.png');
+    }
+}
+@media (max-width:670px){
+    .main-hobby{
+        font-size: 9px;
+    }
+    .sub-hobby{
+        font-size: 15px;
+        display: grid;
+        grid-template-columns: repeat(2, 15em);
+        grid-template-rows: repeat(3, 10em);
+        grid-template-areas: "A B"
+                             "C D"
+                             "K K";
+        justify-content: center;
+        gap: 1em;
+    }
+    .sub-hobby a:nth-child(5) div{
+        grid-area: K;
+        height: 10em;
+        width: 31em;
+    }
+}
+@media (max-width:600px){
+    .sub-profile{
+        font-size: 11px;
+    }
+    .profile-about{
+        font-size: 18px;
+    }
+}
+@media (max-width:570px){
+    .main-hobby{
+        font-size: 7px;
+    }
+    .sub-hobby{
+        font-size: 12px;
+        display: grid;
+        grid-template-columns: repeat(2, 15em);
+        grid-template-rows: repeat(3, 10em);
+        grid-template-areas: "A B" 
+                             "C D"
+                             "K K";
+        justify-content: center;
+        gap: 1em;
+    }
+    .sub-hobby a:nth-child(5) div{
+        grid-area: K;
+        height: 10em;
+        width: 31em;
+    }
+}
+@media (max-width:500px){
+    .sub-profile{
+        font-size: 8px;
+    }
+    .profile-about{
+        font-size: 15px;
+    }
+}
+@media (max-width:440px){
+    .main-hobby{
+        font-size: 5px;
+    }
+    .intro-section{
+        font-size: 5px;
+    }
+    .intro-section > img{
+        width: 60vw;
+    }
+    .intro-section p{
+        font-size:4.5vw;
+    }
+    .sub-hobby{
+        font-size: 9px;
+        display: grid;
+        grid-template-columns: repeat(2, 15em);
+        grid-template-rows: repeat(3, 10em);
+        grid-template-areas: "A B"
+                             "C D"
+                             "K K";
+        justify-content: center;
+        gap: 1em;
+    }
+    .sub-hobby a:nth-child(5) div{
+        grid-area: K;
+        height: 10em;
+        width: 31em;
+    }
+    footer{
+        font-size: 15px;
+    }
+}
+@media (max-width:370px){
+    .sub-profile{
+        font-size: 7px;
+    }
+    .profile-about{
+        font-size: 14px;
+    }
+}
+/*ALL*/
